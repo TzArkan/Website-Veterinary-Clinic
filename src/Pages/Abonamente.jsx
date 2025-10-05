@@ -1,9 +1,15 @@
 import React from "react";
+import './Home.css';
+
 
 function Abonamente() {
   return (
     <div className="page">
-      <h1>Abonamente</h1>
+      <div className="postnavbar">
+        <div className="overlay-postnav">
+          <h1>Abonamente</h1>
+        </div>
+      </div>
       <p>Aici pui conținutul pentru pagina Abonamente.</p>
     </div>
   );

@@ -1,12 +1,17 @@
 import React from "react";
+import './Home.css';
 
-function Consultare() {
+function Consultatii() {
   return (
     <div className="page">
-      <h1>Consultare</h1>
+      <div className="postnavbar">
+        <div className="overlay-postnav">
+          <h1>Consultatii</h1>
+        </div>
+      </div>
       <p>Aici pui conținutul pentru pagina Consultare.</p>
     </div>
   );
 }
 
-export default Consultare;
+export default Consultatii;

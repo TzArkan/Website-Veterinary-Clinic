@@ -1,9 +1,14 @@
 import React from "react";
+import './Home.css';
 
 function Contact() {
   return (
     <div className="page">
-      <h1>Contact</h1>
+      <div className="postnavbar">
+        <div className="overlay-postnav">
+          <h1>Contact</h1>
+        </div>
+      </div>
       <p>Aici pui conținutul pentru pagina Contact.</p>
     </div>
   );

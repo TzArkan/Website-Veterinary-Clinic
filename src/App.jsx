@@ -19,6 +19,9 @@ import Vaccinare from './Pages/Vaccinare';
 
 import './App.css';
 import './videos/Video.css';
+import TermeniSiConditii from './Pages/TermeniSiConditii';
+import PoliticaConfidentialitate from './Pages/PoliticaConfidentialitate';
+import PoliticaClienti from './Pages/PoliticaClienti';
 
 function App() {
   return (
@@ -35,10 +38,13 @@ function App() {
           <Route path="/servicii" element={<Servicii />} />
           <Route path="/urgente" element={<Urgente />} />
           <Route path="/programari" element={<Programari />} />
-          <Route path="/consultare" element={<Consultare />} />
+          <Route path="/consultatii" element={<Consultare />} />
           <Route path="/vaccinare" element={<Vaccinare />} />
           <Route path="/ecografiere" element={<Ecografiere />} />
           <Route path="/microcipare" element={<Microcipare />} />
+          <Route path="/termeni-conditii" element={<TermeniSiConditii />} />
+          <Route path="/politica-confidentialitate" element={<PoliticaConfidentialitate />} />
+          <Route path="/politica-clienti" element={<PoliticaClienti />} />
         </Routes>
         <div className="footerr">
           <SubFooter />

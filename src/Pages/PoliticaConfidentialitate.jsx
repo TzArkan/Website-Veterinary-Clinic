@@ -1,9 +1,14 @@
 import React from "react";
+import './Home.css';
 
 function PoliticaConfidentialitate() {
   return (
     <div className="page">
-      <h1>PoliticaConfidentialitate</h1>
+      <div className="postnavbar">
+        <div className="overlay-postnav">
+          <h1>Politica de confidentialitate</h1>
+        </div>
+      </div>
       <p>Aici pui conținutul pentru pagina PoliticaConfidentialitate.</p>
     </div>
   );

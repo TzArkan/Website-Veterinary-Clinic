@@ -1,47 +1,83 @@
-.card { 
-    background: white;
-    width: 500px;
-    height: 500px;
-    border-radius: 15px; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
-    overflow: hidden; 
-    display: flex; 
-    flex-direction: column;
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    align-self: center;
-    align-items: center;
-    
-} 
-.card:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15); 
-} 
-.card img { 
-    width: 40%; 
-    height: 40%; 
-    object-fit: cover;
-} 
-.card h2 { 
-    font-size: 2rem; 
-    margin: 1rem; 
-    color: #333; 
-} 
-.card p { 
-    font-size: 1.2rem; 
-    margin: 0 1rem 1rem; 
-    color: #666; 
-} 
-.card-btn { 
-    background: #4CAF50; 
-    color: white; 
-    text-decoration: none; 
-    text-align: center;
-    padding: 0.8rem; 
-    border-radius: 0 0 15px 15px; 
-    transition: background 0.3s ease; 
-} 
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 400px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
-.card-btn:hover { 
-    background: #45a049; 
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Content section */
+.card-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* The “Mai multe” button */
+.card-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 119, 204, 0.3);
+}
+
+.card-btn:hover {
+  background-color: #0099ff;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Hover effect for the whole card */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }

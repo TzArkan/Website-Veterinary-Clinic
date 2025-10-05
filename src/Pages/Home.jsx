@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import video from '../videos/VeterinaryHomepageVideoSlowMeow.mp4';
 import './Home.css';
 import {Link} from 'react-router-dom';
@@ -8,7 +8,6 @@ import echipaImg from '../images/echipaImg.jpg';
 import abonamenteImg from '../images/abonamenteImg.jpg';
 import serviciiImg from '../images/serviciiImg.jpg';
 import contactImg from '../images/contactImg.jpg';
-import backgroundImg from '../images/backgroundS2.jpg';
 
 function Home() {
   const slides = [
@@ -41,10 +40,33 @@ function Home() {
     return () => clearInterval(interval); 
   }, [current]);
 
+  useEffect(() => {
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // trigger only once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="main-content">
       <div className="video1">
-        <video src={video} autoPlay loop muted />
+        <video src={video} autoPlay loop muted
+        playsInline
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback" />
 
         <div className="overlay-card">
             <h1>{slides[current].title}</h1>
@@ -76,41 +98,41 @@ function Home() {
       <div className='second-content'>
         <div className='backgroundS2'>
         
-      <section className="cards-section">
-        <Cardbasic
-          image={despreNoiImg}
-          title="Despre Noi"
-          text="Află mai multe despre clinica noastră și valorile noastre."
-          link="/desprenoi"
-        />
-        <Cardbasic
-          image={echipaImg}
-          title="Echipa"
-          text="Cunoaște echipa noastră de medici veterinari dedicați."
-          link="/echipa"
-        />
+            <section className="cards-section">
+              <Cardbasic
+                image={despreNoiImg}
+                title="Despre Noi"
+                text="Află mai multe despre clinica noastră și valorile noastre."
+                link="/desprenoi"
+              />
+              <Cardbasic
+                image={echipaImg}
+                title="Echipa"
+                text="Cunoaște echipa noastră de medici veterinari dedicați."
+                link="/echipa"
+              />
 
-        <Cardbasic
-          image={abonamenteImg}
-          title="Abonamente"
-          text="Cu abonamentele noastre personalizate, beneficiezi de consulturi regulate, vaccinări incluse, analize de rutină, și discounturi exclusive la intervenții și tratamente."
-          link="/abonamente"
-        />
+              <Cardbasic
+                image={abonamenteImg}
+                title="Abonamente"
+                text="Cu abonamentele noastre personalizate, beneficiezi de consulturi regulate, vaccinări incluse, analize de rutină, și discounturi exclusive la intervenții și tratamente."
+                link="/abonamente"
+              />
 
-        <Cardbasic
-          image={serviciiImg}
-          title="Servicii"
-          text="Descoperă gama completă de servicii medicale pentru animale."
-          link="/servicii"
-        />
+              <Cardbasic
+                image={serviciiImg}
+                title="Servicii"
+                text="Descoperă gama completă de servicii medicale pentru animale."
+                link="/servicii"
+              />
 
-        <Cardbasic
-          image={contactImg}
-          title="Contact"
-          text="Afla unde poti gasi clinica noastra veterinara si cum ne poti contacta."
-          link="/contact"
-        />
-      </section>
+              <Cardbasic
+                image={contactImg}
+                title="Contact"
+                text="Afla unde poti gasi clinica noastra veterinara si cum ne poti contacta."
+                link="/contact"
+              />
+            </section>
        </div>
       </div>
     </div>

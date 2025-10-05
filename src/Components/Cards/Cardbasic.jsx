@@ -6,8 +6,10 @@ function Cardbasic({ image, title, text, link }) {
   return (
     <div className="card">
       <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p>{text}</p>
+        <div className="card-content">
+          <h2>{title}</h2>
+          <p>{text}</p>
+        </div>
       <Link to={link} className="card-btn">
         Mai multe
       </Link>
