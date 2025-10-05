@@ -1,0 +1,92 @@
+.navbar{
+    height: 80px;
+    min-height: 80px;
+    top: 0;
+    flex-shrink: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    position: sticky;
+    border-bottom:#333;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+    z-index: 10;
+    
+    
+}
+
+.navbar-logo{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+
+.logo{
+    height:90px;
+    width: auto;
+}
+
+.logo-text {
+  font-size: 1.2rem;    
+  font-family:cursive;
+  color: #000000;               
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    width: 130vw;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    
+    
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 14px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s all ease-out;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 6px;
+    padding: 8px 16px;   
+    background: transparent; 
+    display: inline-block;
+}
+.nav-item a:hover {
+  color: rgb(1, 171, 171); /* or any color you want */
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 136, 255); 
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%; 
+    
+}

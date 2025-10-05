@@ -1,0 +1,54 @@
+.servicii-submeniu {
+  width: 180px;
+  position:absolute;
+  transform: translateX(-50%);
+  inset-inline-start: 20px;    
+  inset-block-start: 20px ;       
+  background-color: #ffffff;
+  list-style: none;
+  text-align: center;
+  display: none;  
+  z-index: 2;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #ccc; 
+  
+}
+
+.servicii-submeniu.show {
+  display: block;
+  transition: 0.3s all ease-out;
+  font-size: 1.2rem;
+
+}
+
+.servicii-submeniu li {
+  cursor: pointer;
+  width: 100%; 
+  
+}
+
+
+.servicii-submeniu li:hover {
+  background: #d8d8d8;
+  border-radius: 10px;
+}
+
+.servicii-submeniu.clicked {
+  display: none;
+}
+
+.submeniu-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.submeniu-item:hover {
+  color: rgb(0, 0, 0);
+}
+
+
+
+

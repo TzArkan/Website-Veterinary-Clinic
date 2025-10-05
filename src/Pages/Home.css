@@ -1,0 +1,131 @@
+.overlay-card {
+    position: absolute; /* sits on top of the video */
+    top: 50%; 
+    left: 5%;
+    transform: translate(-3%, -50%); /* center horizontally + vertically */
+    background: rgba(231, 231, 231, 0.788); /* transparent white */
+    border-radius: 20px; 
+    padding: 2rem;
+    width: 700px;
+    height: 500px;
+    width: 30%; 
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    box-shadow: 20px 20px 20px rgba(20, 20, 20, 0.25);
+    justify-content: space-between;
+    z-index: 9;
+  }
+
+.overlay-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+.overlay-card p {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.overlay-btnurg {
+  background: #e10000;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 80px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.overlay-btnurg .overlay-link{
+  text-decoration: none;
+  color:white;
+  display:block;
+  text-align: center;
+  align-items: center;
+}
+
+.overlay-btnurg:hover {
+  background: #ff2e2e;
+}
+
+.overlay-btnprog {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 80px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.overlay-btnprog .overlay-link{
+  text-decoration: none;
+  color:white;
+  display:block;
+  text-align: center;
+  align-items: center;
+}
+
+.overlay-btnprog:hover {
+  background: rgb(96, 212, 101);
+}
+
+.overlay-bars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  z-index: 3;
+}
+
+.bar {
+  width: 70px;      /* long, rectangle-like */
+  height: 16px;      /* short height */
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bar.active {
+  background: #4CAF50; /* highlight active */
+  transform: scale(1.1); /* make it pop a little */
+}
+
+
+.cards-section {
+  position: relative;
+  z-index: 1; /* on top of image */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.backgroundS2 {
+  position: relative;
+  background-image: url('../images/backgroundS2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem; /* space around cards */
+}
+

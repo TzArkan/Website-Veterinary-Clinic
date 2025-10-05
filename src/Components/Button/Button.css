@@ -1,0 +1,46 @@
+.butoane{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    justify-content: space-between;
+    gap:5px;
+
+}
+
+.btnur {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    font-size: 1.5rem;
+    color: white;
+    background: rgb(205, 48, 4);
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+    border-radius: 7px;
+    
+    
+}
+
+.btnur:hover {
+    color: white;
+    background: rgb(250, 58, 5);
+}
+
+.btnpr {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    font-size: 1.5rem;
+    color: white;
+    background: rgb(15, 158, 5);
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+    border-radius: 7px;
+    
+
+}
+
+.btnpr:hover {
+    color: white;
+    background: rgb(25, 196, 12);
+}
